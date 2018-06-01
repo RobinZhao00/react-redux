@@ -1,0 +1,55 @@
+{
+  "protocolSelect": false,
+  "recommendChannelList": [
+    {
+      "channel": "ZYCFC_DL",
+      "detailInfoUrl": "",
+      "icon": "http://7xl9p7.com1.z0.glb.clouddn.com//147a4637-19e7-4672-9fbd-6f07d880dd06.jpg",
+      "isAuthorization": false,
+      "isSelected": true,
+      "name": "中原消费金融",
+      "needCreditCard": false,
+      "needDebitCard": false,
+      "needSupplement": true,
+      "phone": "",
+      "protocolSelect": false,
+      "recommend": false,
+      "sequence": 1,
+      "status": "UNCREATED",
+      "tag": ""
+    },
+    {
+      "channel": "BOC-WF",
+      "icon": "https://lattehtml.lattebank.com/adBanner/rg2n6f9gb3.png",
+      "isAuthorization": false,
+      "isSelected": false,
+      "name": "中银消费金融",
+      "needCreditCard": false,
+      "needDebitCard": true,
+      "needSupplement": false,
+      "phone": "95137",
+      "protocolSelect": false,
+      "recommend": false,
+      "sequence": 1,
+      "status": "UNCREATED"
+    },
+    {
+      "channel": "ZYCFC_WF",
+      "detailInfoUrl": "",
+      "icon": "http://7xl9p7.com1.z0.glb.clouddn.com//147a4637-19e7-4672-9fbd-6f07d880dd06.jpg",
+      "isAuthorization": false,
+      "isSelected": false,
+      "name": "中原消费金融",
+      "needCreditCard": false,
+      "needDebitCard": false,
+      "needSupplement": true,
+      "phone": "",
+      "protocolSelect": false,
+      "recommend": false,
+      "sequence": 1,
+      "status": "UNCREATED",
+      "tag": ""
+    }
+  ],
+  "tip": "请选择放款机构（选择多家可增加放款成功率）"
+}

@@ -1,16 +1,68 @@
 {
   "name": "react-dedux-demo",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4"
-  },
+  "version": "1.0.0",
+  "description": "react-redux-demo",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinZhao00/react-redux.git"
+  },
+  "author": "zhaoyu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobinZhao00/react-redux/issues"
+  },
+  "homepage": "https://github.com/RobinZhao00/react-redux#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "0.1.19",
+    "css-loader": "0.28.11",
+    "express": "4.16.3",
+    "html-webpack-plugin": "3.2.0",
+    "style-loader": "0.21.0",
+    "webpack": "4.10.2",
+    "webpack-cli": "2.1.4",
+    "webpack-dev-middleware": "3.1.3",
+    "webpack-dev-server": "3.1.4"
+  },
+  "dependencies": {
+    "babel-core": "6.26.3",
+    "babel-eslint": "8.2.3",
+    "babel-loader": "7.1.4",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-import": "1.7.0",
+    "babel-plugin-transform-decorators-legacy": "1.3.5",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-loader": "2.0.0",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.8.2",
+    "node-sass": "4.9.0",
+    "postcss": "6.0.22",
+    "postcss-calc": "6.0.1",
+    "postcss-loader": "2.1.5",
+    "postcss-nested": "3.0.0",
+    "postcss-px-to-viewport": "0.0.3",
+    "postcss-simple-vars": "4.1.0",
+    "prop-types": "15.6.1",
+    "react": "16.4.0",
+    "react-addons-css-transition-group": "15.6.2",
+    "react-dom": "16.4.0",
+    "react-hot-loader": "4.2.0",
+    "react-prefixer": "2.0.1",
+    "react-redux": "5.0.7",
+    "react-router-dom": "4.2.2",
+    "redux": "4.0.0",
+    "sass-loader": "7.0.1",
+    "webpack-merge": "4.1.2"
   }
 }
