@@ -2,10 +2,11 @@ import React from 'react';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import HelloWorld from './HelloWorld';
 // import About from './ReactRouter/components/About';
-import { NewCounter } from './ReduxDemo2/containers'
+// import { NewCounter } from './ReduxDemo2/containers'
 
+import ReactRouter from './ReactRouter';
 
-export const App = () => <NewCounter/>
+export const App = () => <ReactRouter/>
 //   (
 //   {/*<Router>*/}
 //     {/*<div>*/}
