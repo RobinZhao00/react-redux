@@ -1,14 +1,15 @@
+import createHistory from 'history/createHashHistory'
 import React, { Component } from 'react';
-import { Router, Route, Link } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import About from './components/About';
 
+export const history = createHistory()
 
 export default class ReactRouter extends Component {
   render() {
     return (
-      <Router>
-        <button><Link to={'/'}/></button>
-        <Route path="/" component={About}/> {/*eslint-disable-line*/}
+      <Router history={history}>
+        <Route path="/" component={About} />
       </Router>
     );
   }

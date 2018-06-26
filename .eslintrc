@@ -1,0 +1,67 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+
+  "env": {
+    "browser": true
+  },
+
+  "globals": {
+    "$": true,
+    "h5a": true,
+    "head": true,
+    "wx": true
+  },
+
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack.dev.js"
+      }
+    }
+  },
+
+  "rules": {
+    "func-names": 0,
+    "max-len": 0,
+    "new-cap": [2, { "capIsNewExceptions": ["Immutable", "List", "Map", "Set"] }],
+    "no-console": 0,
+    "no-else-return": 0,
+    "no-nested-ternary": 0,
+    "no-param-reassign": 0, // ** do it right
+    "no-plusplus": 0,
+    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+    "no-void": 0,
+    "prefer-arrow-callback": 0,
+    "prefer-const": 0,
+    "consistent-return": 0,
+    "react/jsx-closing-bracket-location": [2, {
+      "nonEmpty": "tag-aligned",
+      "selfClosing": "tag-aligned"
+    }],
+    "react/sort-comp": 0,
+    "react/jsx-indent": 0, // ** do it right
+    "react/jsx-tag-spacing": 0,
+    "react/no-array-index-key": 0,
+    "react/no-multi-comp": 0,
+    "react/prop-types": [2, { "ignore": ["children", "dispatch", "history", "params"] }],
+    "react/forbid-prop-types": 0,
+    "react/require-default-props": 0,
+    "react/self-closing-comp": ["error", {
+      "component": true,
+      "html": false
+    }],
+    "react/prefer-stateless-function": 0,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+
+    // https://github.com/airbnb/javascript/issues/948
+    "generator-star-spacing": 0,
+    "spaced-comment": 0,
+
+    "comma-dangle": 0,
+    "semi": 0,
+    "no-mixed-operators": 0
+  }
+}
