@@ -8,7 +8,7 @@ module.exports = merge(common, {
     plugins: [
     new HtmlWebpackPlugin({
       inject: false,
-      template: './src/templates/index_prod.html',
+      template: './rsrc/templates/index_prod.html',
       filename: path.resolve(__dirname, 'index.html'),
     }),
   ],

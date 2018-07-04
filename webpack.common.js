@@ -7,11 +7,10 @@ const { NamedModulesPlugin, HotModuleReplacementPlugin } = webpack;
 
 module.exports = {
   entry: {
-    app: './src/index.jsx',
-    print: './src/print.js'
+    app: './rsrc/src/index.jsx',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.css', '.scss'],
+    extensions: ['*', '.js', '.jsx', '.css', '.scss'],
   },
   output: {
     filename: '[name].bundle.js',
@@ -43,6 +42,7 @@ module.exports = {
         ]
       },
       { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.(png|jpg|jpeg)$/, loader: 'url-loader' },
     ]
   }
 };

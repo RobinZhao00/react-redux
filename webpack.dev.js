@@ -11,7 +11,7 @@ module.exports = merge(common, {
   plugins: [
     new HtmlWebpackPlugin({
       inject: false,
-      template: './src/templates/index_dev.html'
+      template: './rsrc/templates/index_dev.html'
     })
   ],
 });
