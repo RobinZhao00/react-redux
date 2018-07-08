@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Card } from 'antd';
 import './style.scss';
+import Navbar from '../common/Navbar';
+import Footer from '../common/Footer';
 
 const customerProfile = [
   {
@@ -25,26 +27,48 @@ const customerProfile = [
       '4.项目建设地点：江苏省泰州市医药高新区； ',
       '5.项目社会效益：项目建成后满足市场需求，促进经济发展，增加公司利润，增加就业机会。',
     ],
+  },
+  {
+    title: '详细介绍',
+    content: [
+      '1.项目建设背景：该项目是公司为扩大生产规模，提高市场占有率而规划建设；',
+      '2.项目建设内容： ',
+      'a.建设规模：年产1万吨镍钴铝三元锂电池正极材料； ',
+      'b.生产车间及装置介绍：项目新建厂房，新建生产线； ',
+      '3.生产工艺路线：原材料搅拌--混锂烧结-鄂破-筛分-包装成品； ',
+      '4.项目建设地点：江苏省泰州市医药高新区； ',
+      '5.项目社会效益：项目建成后满足市场需求，促进经济发展，增加公司利润，增加就业机会。',
+    ],
+  }, {
+    title: '详细介绍',
+    content: [
+      '1.项目建设背景：该项目是公司为扩大生产规模，提高市场占有率而规划建设；',
+      '2.项目建设内容： ',
+      'a.建设规模：年产1万吨镍钴铝三元锂电池正极材料； ',
+      'b.生产车间及装置介绍：项目新建厂房，新建生产线； ',
+      '3.生产工艺路线：原材料搅拌--混锂烧结-鄂破-筛分-包装成品； ',
+      '4.项目建设地点：江苏省泰州市医药高新区； ',
+      '5.项目社会效益：项目建成后满足市场需求，促进经济发展，增加公司利润，增加就业机会。',
+    ],
   }
 ];
 
-export default class ChanceDetails extends Component { // 商机详情页面
-  state = {
-    ChanceDetails: 'ChanceDetails',
-  };
-
+export default class ChanceDetails extends Component { // 商机详情页
   render() {
     return (
       <div className="chance-details-container">
-        {
-          customerProfile.map(item => (
-            <Card title={item.title} style={{ width: '1184px' }} key={item.title}>
-              {
-                item.content.map((itm, idx) => <p key={item + idx}>{itm}</p>)
-              }
-            </Card>))
-        }
-        {this.state.ChanceDetails}
+        <Navbar activeMenu="公司"/>
+        <div className="chance-details-body">
+          {
+            customerProfile.map((item, index) => (
+              <Card title={item.title} style={{ width: '1184px' }} key={item.title + index}>
+                {
+                  item.content.map((itm, idx) => <p key={item + idx}>{itm}</p>)
+                }
+              </Card>))
+          }
+          <Footer/>
+        </div>
       </div>
     );
   }
