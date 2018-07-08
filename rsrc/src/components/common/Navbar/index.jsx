@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Button } from 'antd'
+import RewardForm from '../RewardForm'
+import LoginForm from '../LoginForm'
+
 import './style.scss';
 
 export default class Navbar extends React.Component {
@@ -8,10 +11,27 @@ export default class Navbar extends React.Component {
     activeMenu: PropTypes.string,
   }
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      rewardFormVisible: false,
+      loginFormVisible: false,
+    }
+  }
+
+  submitRewardForm = (results) => {
+    console.log(results)
+  }
+
+  submitLoginForm= (results) => {
+    console.log(results)
+  }
+
   render() {
     const { activeMenu } = this.props;
     console.log(activeMenu)
 
+    const { rewardFormVisible, loginFormVisible } = this.state;
     return (
       <div className="Navbar-container">
         <div className="content">
@@ -44,17 +64,19 @@ export default class Navbar extends React.Component {
           </div>
           <div className="btn-area">
             <Button>发布项目</Button>
-            <Button>发布悬赏</Button>
+            <Button onClick={() => this.setState({ rewardFormVisible: true })}>发布悬赏</Button>
           </div>
           <div className="icon-area">
             <div className="search-icon"></div>
             <div className="notification-icon"></div>
           </div>
           <div className="login-area">
-            <button>登录</button>
+            <button onClick={() => this.setState({ loginFormVisible: true })}>登录</button>
             <button className="active">注册</button>
           </div>
         </div>
+        <RewardForm visible={rewardFormVisible} closeModal={() => this.setState({ rewardFormVisible: false })} onSubmit={this.submitRewardForm} />
+        <LoginForm visible={loginFormVisible} closeModal={() => this.setState({ loginFormVisible: false })} onSubmit={this.submitLoginForm} />
       </div>
     )
   }
