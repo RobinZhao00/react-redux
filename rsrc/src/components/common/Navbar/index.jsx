@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Button } from 'antd'
 import RewardForm from '../RewardForm'
+import LoginForm from '../LoginForm'
+
 import './style.scss';
 
 export default class Navbar extends React.Component {
@@ -13,6 +15,7 @@ export default class Navbar extends React.Component {
     super(props);
     this.state = {
       rewardFormVisible: false,
+      loginFormVisible: false,
     }
   }
 
@@ -20,11 +23,15 @@ export default class Navbar extends React.Component {
     console.log(results)
   }
 
+  submitLoginForm= (results) => {
+    console.log(results)
+  }
+
   render() {
     const { activeMenu } = this.props;
     console.log(activeMenu)
 
-    const { rewardFormVisible } = this.state;
+    const { rewardFormVisible, loginFormVisible } = this.state;
     return (
       <div className="Navbar-container">
         <div className="content">
@@ -64,11 +71,12 @@ export default class Navbar extends React.Component {
             <div className="notification-icon"></div>
           </div>
           <div className="login-area">
-            <button>登录</button>
+            <button onClick={() => this.setState({ loginFormVisible: true })}>登录</button>
             <button className="active">注册</button>
           </div>
         </div>
         <RewardForm visible={rewardFormVisible} closeModal={() => this.setState({ rewardFormVisible: false })} onSubmit={this.submitRewardForm} />
+        <LoginForm visible={loginFormVisible} closeModal={() => this.setState({ loginFormVisible: false })} onSubmit={this.submitLoginForm} />
       </div>
     )
   }
