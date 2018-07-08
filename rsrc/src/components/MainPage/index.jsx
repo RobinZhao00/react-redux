@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button } from 'antd'
-import Navbar from '../common/Navbar';
 import Footer from '../common/Footer';
 import './style.scss';
 
@@ -8,7 +7,6 @@ export default class MainPage extends Component {
   render() {
     return (
       <div className="main-page-container">
-        <Navbar activeMenu="首页"/>
         <div className="main-page-body">
           <div className="body-container">
             <div className="carousel-container">
