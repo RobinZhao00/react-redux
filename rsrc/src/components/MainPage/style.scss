@@ -18,38 +18,6 @@
       height: 100%;
       overflow-y: scroll;
 
-      .carousel-container {
-        position: relative;
-        height: 640px;
-        width: 100%;
-
-        .carousel-inner-container {
-          width: 100%;
-          height: 100%;
-          background-image: url(./images/u12.png);
-          background-size: 100% auto;
-          background-repeat: no-repeat;
-        }
-
-        .btn-container {
-          position: absolute;
-          bottom: 50px;
-          left: 50%;
-          transform: translateX(-50%);
-
-          button {
-            font-weight: bold;
-            border: none;
-            width: 100px;
-            height: 30px;
-            background: rgb(24, 144, 255);
-            color: #fff;
-            margin-right: 10px;
-            border-radius: 10px;
-          }
-        }
-      }
-
       .section {
         display: flex;
         flex-direction: column;
@@ -152,4 +120,16 @@
       }
     }
   }
+}
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
 }
