@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'antd'
+import { Carousel } from 'antd';
 import Footer from '../common/Footer';
 import './style.scss';
 
@@ -7,15 +7,16 @@ export default class MainPage extends Component {
   render() {
     return (
       <div className="main-page-container">
+        <div>
+          <Carousel autoplay>
+            <div><h3>1</h3></div>
+            <div><h3>2</h3></div>
+            <div><h3>3</h3></div>
+            <div><h3>4</h3></div>
+          </Carousel>
+        </div>
         <div className="main-page-body">
           <div className="body-container">
-            <div className="carousel-container">
-              <div className="carousel-inner-container"></div>
-              <div className="btn-container">
-                <Button className="release-reward">发布悬赏</Button>
-                <Button className="release-project" style={{ marginLeft: '80px' }}>发布项目</Button>
-              </div>
-            </div>
             <section className="section hot">
               <div className="hot-item">
                 <span>12，300</span>
